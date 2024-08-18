@@ -1828,7 +1828,7 @@ M.launch=function()
 			}
 		}
 		
-		M.plants['eldrwort'].unlocked=1;
+		M.plants['elderwort'].unlocked=1;
 		
 		M.loopsMult=1;
 		
