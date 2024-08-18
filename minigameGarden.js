@@ -112,6 +112,7 @@ M.launch=function()
 				name:'Elderwort',
 				icon:7,
 				cost:60*3,
+				plantable:false,
 				costM:100000000,
 				ageTick:0.3,
 				ageTickR:0.5,
@@ -356,7 +357,7 @@ M.launch=function()
 			'queenbeetLump':{
 				name:'Juicy queenbeet',
 				icon:18,
-				plantable:false,
+				
 				cost:60*2,
 				costM:1000000000000,
 				ageTick:0.04,
@@ -652,7 +653,7 @@ M.launch=function()
 			if (neighsM['whiteMildew']>=1 && neighs['brownMold']<=1) muts.push(['brownMold',0.5]);
 			if (neighsM['brownMold']>=1 && neighs['whiteMildew']<=1) muts.push(['whiteMildew',0.5]);
 			if (neighsM['meddleweed']>=1 && neighs['meddleweed']<=3) muts.push(['meddleweed',0.15]);
-			
+			if (neighsM['elderwort']>=1) muts.push(['nursetulip',0.5]);
 			if (neighsM['shimmerlily']>=1 && neighsM['whiteChocoroot']>=1) muts.push(['whiskerbloom',0.01]);
 			if (neighsM['shimmerlily']>=1 && neighsM['whiskerbloom']>=1) muts.push(['chimerose',0.05]);
 				if (neighsM['chimerose']>=2) muts.push(['chimerose',0.005]);
@@ -667,6 +668,7 @@ M.launch=function()
 			if (neighsM['queenbeet']>=2) muts.push(['duketater',0.001]);
 			
 				if (neighsM['crumbspore']>=1 && neighs['crumbspore']<=1) muts.push(['crumbspore',0.07]);
+			if (neighsM['queenbeetLump']>=1) muts.push(['elderwort',0.7]);
 			if (neighsM['crumbspore']>=1 && neighsM['thumbcorn']>=1) muts.push(['glovemorel',0.02]);
 			if (neighsM['crumbspore']>=1 && neighsM['shimmerlily']>=1) muts.push(['cheapcap',0.04]);
 			if (neighsM['doughshroom']>=1 && neighsM['greenRot']>=1) muts.push(['foolBolete',0.04]);
@@ -1955,7 +1957,7 @@ M.launch=function()
 									{
 										//weeds in empty tiles (no other plants must be nearby)
 										var chance=0.002*weedMult*M.plotBoost[y][x][2];
-										if (Math.random()<chance) M.plot[y][x]=[M.plants['meddleweed'].id+1,0];
+										if (Math.random()<chance) M.plot[y][x]=[M.plants['elderwort'].id+1,0];
 									}
 								}
 							}
