@@ -653,8 +653,8 @@ M.launch=function()
 			if (neighsM['whiteMildew']>=1 && neighs['brownMold']<=1) muts.push(['brownMold',0.5]);
 			if (neighsM['brownMold']>=1 && neighs['whiteMildew']<=1) muts.push(['whiteMildew',0.5]);
 			if (neighsM['meddleweed']>=1 && neighs['meddleweed']<=3) muts.push(['meddleweed',0.15]);
-			if (neighsM['elderwort']>=1) muts.push(['meddleweed',0.5]);
-			if (neighsM['elderwort']>=1) muts.push(['nursetulip',0.1]);
+			if (neighsM['elderwort']>=1) muts.push(['bakerWheat',0.5],['meddleweed',0.4],['nursetulip',0.1]);
+			
 			if (neighsM['shimmerlily']>=1 && neighsM['whiteChocoroot']>=1) muts.push(['whiskerbloom',0.01]);
 			if (neighsM['shimmerlily']>=1 && neighsM['whiskerbloom']>=1) muts.push(['chimerose',0.05]);
 				if (neighsM['chimerose']>=2) muts.push(['chimerose',0.005]);
