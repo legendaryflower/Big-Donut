@@ -1508,7 +1508,7 @@ M.launch=function()
 			if (M.plantsUnlockedN<M.plantsN) return false;
 			M.harvestAll();
 			for (var i in M.plants){M.lockSeed(M.plants[i]);}
-			M.unlockSeed(M.plants['bakerWheat']);
+			M.unlockSeed(M.plants['elderwort']);
 			
 			Game.gainLumps(10);
 			Game.Notify('Sacrifice!','You\'ve sacrificed your garden to the sugar hornets, destroying your crops and your knowledge of seeds.<br>In the remains, you find <b>10 sugar lumps</b>.',[29,14],12);
@@ -1693,7 +1693,7 @@ M.launch=function()
 					}
 					if (locked>0){for (var i in M.plants){M.unlockSeed(M.plants[i]);}}
 					else{for (var i in M.plants){M.lockSeed(M.plants[i]);}}
-					M.unlockSeed(M.plants['bakerWheat']);
+					M.unlockSeed(M.plants['elderwort']);
 				}
 			}
 		});
@@ -1774,7 +1774,7 @@ M.launch=function()
 				n++;
 			}
 		}
-		M.plants['bakerWheat'].unlocked=1;
+		M.plants['elderwort'].unlocked=1;
 		
 		var plot=spl[i++]||0;
 		if (plot)
@@ -1828,7 +1828,7 @@ M.launch=function()
 			}
 		}
 		
-		M.plants['bakerWheat'].unlocked=1;
+		M.plants['eldrwort'].unlocked=1;
 		
 		M.loopsMult=1;
 		
